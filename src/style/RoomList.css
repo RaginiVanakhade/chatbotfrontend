@@ -1,0 +1,72 @@
+/* Add to your existing CSS file, e.g., App.css or RoomList.css */
+
+.room-list-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #0f172a; /* slightly darker than navbar for contrast */
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.room-list-container h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #334155;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.rooms-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.room-card {
+  background-color: #1e293b; /* same as navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  border: 1px solid #334155;
+}
+
+.room-card:hover {
+  background-color: #334155;
+  transform: translateX(5px);
+}
+
+.room-name {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.room-card button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.room-card button:hover {
+  background-color: #2563eb;
+}
+
+/* Optional loading state */
+.loading {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 1.2rem;
+  margin-top: 50px;
+}

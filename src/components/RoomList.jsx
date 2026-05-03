@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import api from '../api';
 import NavBar from './NavBar';
+import "../style/RoomList.css"
 
 const RoomList = () => {
   const [rooms, setRooms] = useState([]);
