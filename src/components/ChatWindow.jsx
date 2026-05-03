@@ -1,9 +1,10 @@
 // import React from 'react'
+import Navbar from "./NavBar"
 
 const ChatWindow = () => {
   return (
-    <div>
-      <h1>hello rooms</h1>
+    <div>     
+        <Navbar/>
     </div>
   )
 }
