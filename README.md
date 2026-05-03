@@ -74,7 +74,7 @@ frontend/
 
 ```bash
 git clone <your-repo-url>
-cd frontend
+cd chatbotfrontend
 
 Install dependencies:
 npm install
