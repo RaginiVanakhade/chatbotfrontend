@@ -7,7 +7,7 @@
 }
 
 /* Container */
-.login-container {
+.register-container {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -16,7 +16,7 @@
 }
 
 /* Card */
-.login-card {
+.register-card {
   width: 100%;
   max-width: 400px;
   padding: 2.5rem;
@@ -28,7 +28,7 @@
 }
 
 /* Eyebrow */
-.login-eyebrow {
+.register-eyebrow {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -39,7 +39,7 @@
 }
 
 /* Divider accent */
-.login-divider {
+.register-divider {
   width: 36px;
   height: 2px;
   background: #b8972a;
@@ -47,7 +47,7 @@
 }
 
 /* Title */
-.login-card h2 {
+.register-card h2 {
   font-size: 1.9rem;
   font-weight: 700;
   color: #1a1a1a;
@@ -55,13 +55,13 @@
   line-height: 1.2;
 }
 
-.login-card h2 em {
+.register-card h2 em {
   font-style: italic;
   color: #b8972a;
   font-weight: 400;
 }
 
-.login-subtitle {
+.register-subtitle {
   font-size: 0.88rem;
   color: #888;
   margin-bottom: 1.8rem;
@@ -69,7 +69,7 @@
 }
 
 /* Form */
-.login-form {
+.register-form {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -92,7 +92,7 @@
 }
 
 /* Inputs */
-.login-input {
+.register-input {
   width: 100%;
   padding: 0.7rem 1rem;
   border-radius: 30px;
@@ -105,17 +105,17 @@
   transition: 0.2s ease;
 }
 
-.login-input::placeholder {
+.register-input::placeholder {
   color: #bbb;
 }
 
-.login-input:focus {
+.register-input:focus {
   border-color: #b8972a;
   box-shadow: 0 0 0 3px rgba(184, 151, 42, 0.12);
 }
 
 /* Button */
-.login-button {
+.register-button {
   margin-top: 0.4rem;
   padding: 0.75rem;
   border-radius: 30px;
@@ -131,40 +131,40 @@
   transition: 0.2s ease;
 }
 
-.login-button:hover {
+.register-button:hover {
   background: #a0821f;
   transform: translateY(-1px);
 }
 
 /* Error message */
-.login-error {
+.register-error {
   margin-top: 1rem;
   font-size: 0.82rem;
   color: #c0392b;
   font-family: sans-serif;
 }
 
-/* Footer links */
-.login-footer {
+/* Footer link */
+.register-footer {
   margin-top: 1.4rem;
   font-size: 0.82rem;
   color: #888;
   font-family: sans-serif;
 }
 
-.login-footer a {
+.register-footer a {
   color: #b8972a;
   text-decoration: none;
   font-weight: 600;
 }
 
-.login-footer a:hover {
+.register-footer a:hover {
   text-decoration: underline;
 }
 
 /* Responsive */
 @media (max-width: 480px) {
-  .login-card {
+  .register-card {
     padding: 1.8rem 1.4rem;
   }
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { Link } from 'react-router-dom';
+import '../style/Register.css'
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -16,47 +17,61 @@ const Register = () => {
   };
 
   return (
-    <div style={styles.container}>
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit} style={styles.form}>
+  <div className="register-container">
+  <div className="register-card">
+    <p className="register-eyebrow">Create Account</p>
+    <div className="register-divider"></div>
+    <p className="register-subtitle">Start your restaurant journey today</p>
+
+    <form onSubmit={handleSubmit} className="register-form">
+      <div className="input-group">
+        <label>Username</label>
         <input
           type="text"
-          placeholder="Username"
+          placeholder="Your username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
-          style={styles.input}
+          className="register-input"
         />
+      </div>
+
+      <div className="input-group">
+        <label>Email</label>
         <input
           type="email"
-          placeholder="Email"
+          placeholder="you@example.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          style={styles.input}
+          className="register-input"
         />
+      </div>
+
+      <div className="input-group">
+        <label>Password</label>
         <input
           type="password"
-          placeholder="Password"
+          placeholder="••••••••"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          style={styles.input}
+          className="register-input"
         />
-        <button type="submit" style={styles.button}>Register</button>
-      </form>
-      {error && <p style={styles.error}>{error}</p>}
-      <p>Already have an account? <Link to="/login">Login</Link></p>
-    </div>
+      </div>
+
+      <button type="submit" className="register-button">Register</button>
+    </form>
+
+    {error && <p className="register-error">{error}</p>}
+
+    <p className="register-footer">
+      Already have an account? <Link to="/login">Login</Link>
+    </p>
+  </div>
+</div>
   );
 };
 
-const styles = {
-  container: { maxWidth: '400px', margin: '50px auto', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' },
-  form: { display: 'flex', flexDirection: 'column', gap: '10px' },
-  input: { padding: '10px', fontSize: '16px', borderRadius: '4px', border: '1px solid #ddd' },
-  button: { padding: '10px', backgroundColor: '#28a745', color: 'white', border: 'none', cursor: 'pointer' },
-  error: { color: 'red' }
-};
 
 export default Register;

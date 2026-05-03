@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { Link } from 'react-router-dom';
+import '../style/Login.css'
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -15,39 +16,48 @@ const Login = () => {
   };
 
   return (
-    <div style={styles.container}>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit} style={styles.form}>
+  <div className="login-container">
+  <div className="login-card">
+    <h2>Login</h2>
+    <p className="login-subtitle">Welcome back</p>
+
+    <form onSubmit={handleSubmit} className="login-form">
+      <div className="input-group">
+        <label>Email</label>
         <input
           type="email"
-          placeholder="Email"
+          placeholder="you@example.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          style={styles.input}
+          className="login-input"
         />
+      </div>
+
+      <div className="input-group">
+        <label>Password</label>
         <input
           type="password"
-          placeholder="Password"
+          placeholder="••••••••"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          style={styles.input}
+          className="login-input"
         />
-        <button type="submit" style={styles.button}>Login</button>
-      </form>
-      {error && <p style={styles.error}>{error}</p>}
-      <p>Don't have an account? <Link to="/register">Register</Link></p>
-    </div>
+      </div>
+
+      <button type="submit" className="login-button">Login</button>
+    </form>
+
+    {error && <p className="login-error">{error}</p>}
+
+    <p className="login-footer">
+      Don't have an account? <Link to="/register">Register</Link>
+    </p>
+  </div>
+</div>
   );
 };
 
-const styles = {
-  container: { maxWidth: '400px', margin: '50px auto', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' },
-  form: { display: 'flex', flexDirection: 'column', gap: '10px' },
-  input: { padding: '10px', fontSize: '16px', borderRadius: '4px', border: '1px solid #ddd' },
-  button: { padding: '10px', backgroundColor: '#007BFF', color: 'white', border: 'none', cursor: 'pointer' },
-  error: { color: 'red' }
-};
 
 export default Login;
