@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify(user));
       setUser(user);
-      navigate('/rooms');
+      navigate('/chatWindow');
       return { success: true };
     } catch (err) {
       return {
@@ -44,7 +44,7 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify(user));
       setUser(user);
-      navigate('/rooms');
+      navigate('/chatWindow');
       return { success: true };
     } catch (err) {
       return {
