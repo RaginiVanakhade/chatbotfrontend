@@ -1,17 +1,20 @@
-
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from './auth/login';
-function App() {
+import Login from "./auth/Login.jsx";
+import { AuthProvider } from './context/AuthProvider';
+import Register from './auth/Registe.jsx';
 
+function App() {
   return (
-    <>
-     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-      </Routes>
+    <BrowserRouter>
+      <AuthProvider>
+        <Routes>   {/* Only one <Routes> */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Login />} />
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
-    </>
   )
 }
 
